@@ -1,6 +1,10 @@
 body{
 	background-color: lightblue;
 }
+.img{
+  position: relative;
+}
+
 .frame{
 	width: 100px;
 	height: 50px;
