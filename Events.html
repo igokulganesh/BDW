@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handle Events</title>
+</head>
+<body align="center" onload="welcome()">
+	<h3>1. Mouse events</h3>
+
+	<button id="button1" onclick="SingleCLick()">Single Click</button> 
+	<button id="button2" ondblclick="DoubleClick()">Double-click</button>
+	<h4 id="mouse" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Have Nice Day</h4>
+
+	<br><h3>2. Keyboard events</h3>
+
+	<input id="input1" type="text" onkeydown="KeyPressed()" placeholder="type Something"><br>
+	<input id="input2" type="text" onkeyup="toUp()" placeholder="To Upper Case"><br>
+	<input id="input3" type="text" onkeyup="toLow()" placeholder="To Lower Case"><br>
+
+	<br><h3>3. Window events</h3>
+
+	<input id="input4" type="text" value="Select me!!" onselect="selectfun()"><br>
+	<input id="input5" type="text" value="Try to copy this text" oncopy="copyFun()"><br>
+
+	<h3>4. Form events</h3>
+
+	<form onsubmit="submited()">
+	  <input type="submit">
+	</form>
+
+
+
+</body>
+	<script type="text/javascript">
+	
+	// Mouse Events 
+
+	function SingleCLick() {
+		document.getElementById("button1").style.color = "red";
+  	
+	}
+	
+	function DoubleClick() {
+  	document.getElementById("button2").style.color = "blue";
+	}
+
+	function mouseEnter() {
+	  document.getElementById("mouse").style.color = "red";
+	}
+
+	function mouseLeave() {
+	  document.getElementById("mouse").style.color = "gray";
+	}
+
+
+	// Keyboard Events 
+
+	function KeyPressed() {
+  	alert("Hey you typed Something...!");
+	}
+
+	function toUp() {
+  	var x = document.getElementById("input2");
+  	x.value = x.value.toUpperCase();
+	}
+
+	function toLow() {
+  	var x = document.getElementById("input3");
+  	x.value = x.value.toLowerCase();
+	}
+
+	// Window events
+
+	function welcome(){
+		alert("Hey Window Events welcomes you!!")
+	}
+
+	function selectfun(){
+		var x = document.getElementById("input4");
+  	x.value = "I'm Selected!!" ;
+	}
+
+	function copyFun(){
+		var x = document.getElementById("input5");
+  	x.value = "Hey You Copy Cat 😜" ;
+	}
+
+	function submited(){
+		alert("thanks for submited");
+	}
+
+	</script>
+</html>
+
